@@ -6,7 +6,11 @@
 
     <groupId>org.xbm</groupId>
     <artifactId>algorithm</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <version>v1.0.0</version>
+    <modules>
+        <module>sort-algorithm</module>
+    </modules>
 
 
 </project>

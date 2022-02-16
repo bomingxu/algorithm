@@ -39,12 +39,12 @@ public class SelectionSort {
                     minpos = i;
                 }
             }
-            System.out.println("最小的数位置为:"+minpos);
+//            System.out.println("最小的数位置为:"+minpos);
             //1.2 将minpos位置的数与0位置上的数互换
             swap(minpos,k,bytes);
 
-            System.out.println("第"+(k+1)+"次选择后的数据：");
-            print(bytes);
+//            System.out.println("第"+(k+1)+"次选择后的数据：");
+//            print(bytes);
         }
     }
 
@@ -86,18 +86,18 @@ public class SelectionSort {
 
             }
             //1.3minPos与0互换，maxPos与bytes.length-1互换
-            System.out.println("第"+(k+1)+"次选择出的最小值位置和最大值位置+"+minpos+":"+maxpos);
-            System.out.println("第"+(k+1)+"次选择出的最小值"+minpos+"与"+k+"互换");
+//            System.out.println("第"+(k+1)+"次选择出的最小值位置和最大值位置+"+minpos+":"+maxpos);
+//            System.out.println("第"+(k+1)+"次选择出的最小值"+minpos+"与"+k+"互换");
             swap(minpos,k,bytes);
             if(maxpos == k){
                 maxpos = minpos;
             }
-            print(bytes);
-            System.out.println("第"+(k+1)+"次选择出的最大值"+maxpos+"与"+(bytes.length-(k+1))+"互换");
+//            print(bytes);
+//            System.out.println("第"+(k+1)+"次选择出的最大值"+maxpos+"与"+(bytes.length-(k+1))+"互换");
             swap(bytes.length-(k+1),maxpos,bytes);
             //1.4 打印结果
 
-            print(bytes);
+//            print(bytes);
         }
 
     }

@@ -19,12 +19,15 @@ public class DataChecker {
 
     public static String check(){
         boolean hasSame = true;
-        for(int j=0;j<100;j++){
+//        for(int j=0;j<100;j++){
             int[] arr = getArray();
             int[] arr2 = new int[arr.length];
             System.arraycopy(arr,0,arr2,0,arr.length);
 //            SelectionSort.primarySelectionSort(arr);
-            ShellSort.sort(arr);
+//            ShellSort.sort(arr);
+            MergeSort.sort(arr,0,arr.length-1);
+            print(arr);
+
             Arrays.sort(arr2);
 
             for(int i=0;i<arr.length;i++){
@@ -33,11 +36,18 @@ public class DataChecker {
                     return "false";
                 }
             }
-        }
+//        }
         return hasSame?"success":"false";
     }
 
     public static void main(String[] args) {
         System.out.println(check());
+    }
+
+    public static void print(int[] bytes){
+        for(int i=0;i<bytes.length;i++){
+            System.out.print(bytes[i]+" ");
+        }
+        System.out.println();
     }
 }

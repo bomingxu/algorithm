@@ -19,16 +19,17 @@ public class DataChecker {
 
     public static String check(){
         boolean hasSame = true;
-        for(int j=0;j<1000;j++){
+        for(int j=0;j<100;j++){
             int[] arr = getArray();
             int[] arr2 = new int[arr.length];
             System.arraycopy(arr,0,arr2,0,arr.length);
-            SelectionSort.primarySelectionSort(arr);
+//            SelectionSort.primarySelectionSort(arr);
+            ShellSort.sort(arr);
             Arrays.sort(arr2);
 
             for(int i=0;i<arr.length;i++){
                 if(arr[i] != arr2[i]){
-                    hasSame = false;
+//                    hasSame = false;
                     return "false";
                 }
             }

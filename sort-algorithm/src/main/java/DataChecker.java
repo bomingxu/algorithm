@@ -19,14 +19,14 @@ public class DataChecker {
 
     public static String check(){
         boolean hasSame = true;
-//        for(int j=0;j<100;j++){
+        for(int j=0;j<100;j++){
             int[] arr = getArray();
             int[] arr2 = new int[arr.length];
             System.arraycopy(arr,0,arr2,0,arr.length);
 //            SelectionSort.primarySelectionSort(arr);
 //            ShellSort.sort(arr);
             MergeSort.sort(arr,0,arr.length-1);
-            print(arr);
+//            print(arr);
 
             Arrays.sort(arr2);
 
@@ -36,7 +36,7 @@ public class DataChecker {
                     return "false";
                 }
             }
-//        }
+        }
         return hasSame?"success":"false";
     }
 

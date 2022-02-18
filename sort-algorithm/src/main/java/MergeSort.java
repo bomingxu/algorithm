@@ -21,19 +21,19 @@ public class MergeSort {
 
         sort(arr,mid+1,right);
 
-        merge01(arr,left,mid,right);
+        merge01(arr,left,mid+1,right);//0,1,1
     }
     //对数字的某个期间进行合并
     private static void merge01(int[] arr,int leftPos,int rightPos,int rightBound) {
-
+        int mid = rightPos-1;//0
         int[] temp = new int[rightBound-leftPos+1];
-        int i = leftPos;
-        int j = rightPos;
+        int i = leftPos;//0
+        int j = rightPos;//1
         int k = 0;
-        while (i<rightPos && j<=rightBound){
+        while (i<=mid && j<=rightBound){//i<=0,j<=1
             temp[k++] = arr[i]<=arr[j]?arr[i++]:arr[j++];
         }
-        while(i<rightPos){
+        while(i<=mid){
             temp[k++] = arr[i++];
         }
 
@@ -45,7 +45,7 @@ public class MergeSort {
             arr[leftPos+m] = temp[m];
         }
 
-        print(temp);
+//        print(temp);
     }
     /*
     //对一个两段都排好顺序的数组进行合并
